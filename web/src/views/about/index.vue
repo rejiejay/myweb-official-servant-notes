@@ -2,7 +2,7 @@
   <section class="author">
     <article class="item">
       <h1 class="logo">
-        <img src="../../assets/images/LOGO.png" alt="LOGO">
+        <img src="../../assets/images/logo.svg" alt="LOGO">
       </h1>
     </article>
     <article class="text">

@@ -1,8 +1,8 @@
 <template>
   <section class="header">
     <header class="header-box">
-      <section class="logo">
-        <a href="/"><img src="../assets/images/LOGO.png" alt="LOGO"></a>
+      <section class="logo flex-start-center">
+        <a href="/"><img src="../assets/images/logo.svg" alt="LOGO"></a>
       </section>
 
       <ul class="nav-dropdown">
@@ -163,7 +163,8 @@
     margin-left: -20px;
 
     & img {
-      width: 100%;
+      padding-left: 25px;
+      width: 65px;
     }
   }
 
