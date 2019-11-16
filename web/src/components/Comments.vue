@@ -100,7 +100,7 @@
       return {
         ruleForm: {
           nickname: '',
-          email: '',
+          email: '454766952@qq.com',
           content: ''
         },
         rules: {
