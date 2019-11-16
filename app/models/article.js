@@ -20,8 +20,6 @@ Article.init({
     author: Sequelize.STRING(64),
     // 文章内容
     content: Sequelize.TEXT,
-    // 文章封面
-    // cover: Sequelize.STRING,
     // 文章分类ID
     category_id: Sequelize.STRING,
     // 文章浏览次数

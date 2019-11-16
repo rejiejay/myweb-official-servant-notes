@@ -30,7 +30,6 @@ class ArticleDao {
         article.title = v.get('body.title');
         article.author = v.get('body.author');
         article.content = v.get('body.content');
-        article.cover = v.get('body.cover');
         article.browse = v.get('body.browse');
         article.category_id = v.get('body.category_id');
 
@@ -181,7 +180,6 @@ class ArticleDao {
         article.title = v.get('body.title');
         article.author = v.get('body.author');
         article.content = v.get('body.content');
-        article.cover = v.get('body.cover');
         article.browse = v.get('body.browse');
         article.category_id = v.get('body.category_id');
 

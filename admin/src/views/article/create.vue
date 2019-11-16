@@ -7,35 +7,13 @@
       <FormItem label="文章作者" prop="author">
         <Input v-model="formValidate.author" placeholder="文章作者" />
       </FormItem>
+      <FormItem label="文章内容" prop="content">
+        <mavon-editor v-model="formValidate.content" :ishljs="true" ref="md"></mavon-editor>
+      </FormItem>
       <FormItem label="文章分类" v-if="categoryList.length > 0">
         <Select v-model="formValidate.category_id">
           <Option v-for="(item, index) in categoryList" :value="item.id" :key="index">{{item.name}}</Option>
         </Select>
-      </FormItem>
-      <!-- <FormItem label="文章封面" prop="cover">
-        <div class="cover">
-          <div class="upload">
-            <Upload
-              multiple
-              type="drag"
-              action="http://up-z2.qiniu.com"
-              :show-upload-list="false"
-              :on-success="uploadSuccess"
-              :on-error="uploadError"
-              :data="{token}">
-              <div style="padding: 20px 0">
-                <Icon type="ios-cloud-upload" size="52" style="color: #3399ff"></Icon>
-                <p>点击或者拖拽上传</p>
-              </div>
-            </Upload>
-          </div>
-          <div class="article-cover" v-if="formValidate.cover">
-            <img :src="formValidate.cover" alt="cover">
-          </div>
-        </div>
-      </FormItem>-->
-      <FormItem label="文章内容" prop="content">
-        <mavon-editor v-model="formValidate.content" :ishljs="true" ref="md"></mavon-editor>
       </FormItem>
       <FormItem>
         <Button @click="handleReset('formValidate')">重置</Button>
@@ -57,9 +35,8 @@ export default {
       categoryList: [],
       formValidate: {
         title: "",
-        author: "",
+        author: "rejiejay",
         category_id: "",
-        cover: "",
         content: ""
       },
       ruleValidate: {
@@ -68,9 +45,6 @@ export default {
         ],
         author: [
           { required: true, message: "文章作者不能为空", trigger: "blur" }
-        ],
-        cover: [
-          { required: true, message: "文章封面不能为空", trigger: "blur" }
         ],
         content: [
           { required: true, message: "文章内容不能为空", trigger: "blur" }
@@ -87,17 +61,6 @@ export default {
       createArticle: "article/createArticle",
       getCategoryList: "category/getCategoryList"
     }),
-    // 上传图片成功
-    uploadSuccess(response) {
-      const url = `http://rejiejay.s3-cn-south-1.qiniucs.com/${response.key}`;
-      this.formValidate.cover = url;
-      this.$Message.success("上传成功!");
-    },
-    // 上传图片失败
-    uploadError(response) {
-      this.$Message.error("上传失败!");
-      console.log(response);
-    },
     // 获取上传token
     async _getUploadToken() {
       try {
