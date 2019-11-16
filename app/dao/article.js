@@ -1,9 +1,8 @@
-const {Sequelize, Op} = require('sequelize')
+const { Sequelize, Op } = require('sequelize')
 
-
-const {Article} = require('../models/article')
-const {Category} = require('../models/category')
-const {Comments} = require('../models/comments')
+const { Article } = require('../models/article')
+const { Category } = require('../models/category')
+const { Comments } = require('../models/comments')
 
 // 定义文章模型
 class ArticleDao {
@@ -56,14 +55,25 @@ class ArticleDao {
                 [Op.like]: `%${keyword}%`
             };
         }
-        const article = await Article.scope('iv').findAndCountAll({
-            limit: pageSize,//每页10条
-            offset: (page - 1) * pageSize,
-            where: filter,
-            order: [
-                [desc, 'DESC']
-            ]
-        });
+
+        let article = {}
+        if (desc === 'random') {
+            article = await Article.scope('iv').findAndCountAll({
+                limit: pageSize,//每页10条
+                offset: (page - 1) * pageSize,
+                where: filter,
+                order: [Sequelize.literal('RAND()')]
+            });
+        } else {
+            article = await Article.scope('iv').findAndCountAll({
+                limit: pageSize,//每页10条
+                offset: (page - 1) * pageSize,
+                where: filter,
+                order: [
+                    [desc, 'DESC']
+                ]
+            });
+        }
 
         const categoryIds = [];
         const articleIds = [];

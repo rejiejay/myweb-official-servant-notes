@@ -3,6 +3,10 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+config/
+config/config.js
+admin/dist/
+web/dist/
 
 # Editor directories and files
 .idea

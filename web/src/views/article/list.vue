@@ -87,7 +87,8 @@ export default {
     return {
       nav: [
         { name: "最新", icon: "el-icon-news", desc: "created_at" },
-        { name: "最热", icon: "el-icon-box", desc: "browse" }
+        { name: "最热", icon: "el-icon-box", desc: "browse" },
+        { name: "随机", icon: "el-icon-sort", desc: "random" }
       ],
       navIndex: 0,
       // 搜索关键字
@@ -140,7 +141,7 @@ export default {
 
     /**
      * 切换文章排序方式
-     * @desc 排序方式 created_at || browse
+     * @desc 排序方式 created_at || browse || random
      * @index 排序索引
      */
     async changeArticleDesc(desc, index) {
