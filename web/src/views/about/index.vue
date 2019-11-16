@@ -7,16 +7,16 @@
     </article>
     <article class="text">
       <p>
-        我叫梁凤波，职业是一名前端工程师，这个博客属于我的个人博客网站，同时也在 <a href="https://github.com/liangfengbo/nodejs-koa-blog" target="_blank">
-        Github </a>开源了此项目代码，
-        我的名字后面有个“波”字，所以起名为：波博客 - <strong>boblog.com</strong>，我相信你肯定能很快记住这个域名，毕竟这个老域名是2001年注册的，那时我还没上学呢，我是从一个非常豪爽、耍酷、帅气的大叔购买得到的。
+        非常感谢 liangfengbo <a href="https://github.com/liangfengbo/nodejs-koa-blog" target="_blank">
+        Github </a>开源的此项目代码
       </p>
-      <p class="content">博客的内容：积极向上的文章。</p>
-      <p>博客的愿景：和更多的朋友一起学习进步。</p>
-      <p>博客的风格：简约至上。</p>
+      <p class="content">此项目的作用为：笔记体系的最后一个环节</p>
+      <p>收集——完善——整理——归档。</p>
     </article>
     <article class="end">
-      <p>最后，祝大家每天开心，每天幸福！</p>
+      <p>收集：任何时刻，收集 公务员觉得有价值的资讯</p>
+      <p>完善：整理出要点，得到有用的笔记</p>
+      <p>整理：整理到博客系统即可</p>
     </article>
   </section>
 </template>
@@ -24,7 +24,7 @@
 <script>
   export default {
     created() {
-      document.title = `波博客 - boblog.com`
+      document.title = `rejiejay.cn Note system`
     }
   }
 </script>

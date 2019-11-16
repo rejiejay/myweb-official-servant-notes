@@ -89,7 +89,7 @@
     created() {
       // 获取文章
       this.getArticle();
-      document.title = `波博客 - boblog.com`
+      document.title = `rejiejay.cn Note system`
     },
     methods: {
       ...mapActions({

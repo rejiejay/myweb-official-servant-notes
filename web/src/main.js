@@ -45,8 +45,8 @@ Vue.config.productionTip = false
 Vue.use(mavonEditor)
 Vue.use(VueLocalStorage);
 Vue.use(VueLazyLoad, {
-  error: '../static/boblog.png',
-  loading: '../static/boblog.png'
+  error: '../static/rejiejay.png',
+  loading: '../static/rejiejay.png'
 })
 
 router.beforeEach(async (to, from, next) => {
