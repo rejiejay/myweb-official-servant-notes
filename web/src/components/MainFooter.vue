@@ -1,8 +1,8 @@
 <template>
   <section class="Footer-wrap">
     <footer class="footer-inner">
-      <p>www.boblog.com - 波博客 Copyright&copy; Author梁凤波 itbo@163.com</p>
-      <p><a href="http://www.miit.gov.cn" target="_blank">粤ICP备18001135号-3</a></p>
+      <p>粤ICP备17119404号 Copyright © Rejiejay曾杰杰</p>
+      <p><a href="http://www.miit.gov.cn" target="_blank">粤ICP备17119404号</a></p>
     </footer>
   </section>
 </template>

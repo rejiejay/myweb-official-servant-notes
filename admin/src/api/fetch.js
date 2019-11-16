@@ -29,13 +29,11 @@ Util.ajax.interceptors.response.use(response => {
   if (response.status === 401) {
     // 登录鉴权失败
     Vue.prototype.$Message.error('登录鉴权失败');
-    Vue.ls.remove("token");
-    location.href = "/login";
+    localStorage.token = '';
 
   } else if (response.status === 403) {
     Vue.prototype.$Message.error('Token无效，请重新登录！');
-    Vue.ls.remove("token");
-    location.href = "/login";
+    localStorage.token = '';
 
   } else if (response.status === 400) {
     Vue.prototype.$Message.error(response.data.msg.join(','))
@@ -94,7 +92,8 @@ export default {
 
 // 转码token
 function _encode() {
-  const token = Vue.ls.get("token");
+
+  const token = localStorage.token;
   const base64 = Base64.encode(token + ':');
   return 'Basic ' + base64
 }

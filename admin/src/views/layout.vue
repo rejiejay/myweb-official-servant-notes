@@ -125,7 +125,7 @@
 
       // 退出登陆
       exitAccount() {
-        Vue.ls.remove("token");
+        localStorage.token = '';
         this.$router.replace({
           path: '/login'
         });

@@ -33,7 +33,6 @@ export default {
 </script>
 
 <style>
-@import "./assets/fonts.css";
 
 html,
 body {

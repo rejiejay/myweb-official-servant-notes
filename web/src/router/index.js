@@ -4,8 +4,6 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
-  // 哈斯
-  mode: 'history',
   scrollBehavior(to, from, savedPosition) {
     // 兼容
     if (savedPosition) {

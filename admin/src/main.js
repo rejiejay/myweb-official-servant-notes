@@ -24,7 +24,6 @@ Vue.use(VueLocalStorage, {
 
 // 路由配置
 const RouterConfig = {
-  mode: 'history',
   routes: Routers,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
@@ -43,9 +42,9 @@ router.beforeEach(async (to, from, next) => {
   iView.LoadingBar.start();
   Util.title(to.meta.title)
 
-  let token = Vue.ls.get("token");
+  let token = localStorage.token;
   if (token) {
-    store.dispatch('admin/auth').then(() => {
+    store.dispatch('admin/auth', token).then(() => {
       next()
 
     }).catch(ret => {

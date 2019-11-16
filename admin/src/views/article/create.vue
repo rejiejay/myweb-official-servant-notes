@@ -54,22 +54,12 @@ export default {
   },
   created() {
     this._getCategoryList();
-    this._getUploadToken();
   },
   methods: {
     ...mapActions({
       createArticle: "article/createArticle",
       getCategoryList: "category/getCategoryList"
     }),
-    // 获取上传token
-    async _getUploadToken() {
-      try {
-        const res = await getUploadToken();
-        this.token = res.token;
-      } catch (e) {
-        console.log(e);
-      }
-    },
     // 获取分类列表
     async _getCategoryList() {
       const res = await this.getCategoryList();

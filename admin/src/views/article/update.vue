@@ -24,12 +24,10 @@
 </template>
 <script>
 import { mapActions } from "vuex";
-import getUploadToken from "../../libs/upload-token";
 
 export default {
   data() {
     return {
-      token: "",
       id: this.$route.params.id,
       detail: null,
       categoryList: [],

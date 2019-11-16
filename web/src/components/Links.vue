@@ -18,10 +18,10 @@
     data() {
       return {
         linkList: [
+          {name: 'Github', href: 'https://github.com/rejiejay'},
+          {name: '知乎', href: 'https://www.zhihu.com/people/ceng-jie-3-87/activities'},
+          {name: 'Qzone', href: 'https://454766952.qzone.qq.com/'},
           {name: 'Github', href: 'https://github.com/liangfengbo'},
-          {name: '慕课网', href: 'https://www.imooc.com/u/3957223'},
-          {name: '掘金', href: 'https://juejin.im/user/58c2981d8ac2470720f75bb9'},
-          {name: 'Coding.net', href: 'https://dev.tencent.com/u/liangfengbo'}
         ]
       }
     },
