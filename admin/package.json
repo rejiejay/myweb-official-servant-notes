@@ -14,7 +14,7 @@
     "iview": "^3.5.3",
     "js-base64": "^2.5.1",
     "mavon-editor": "^2.7.5",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "qiniu": "^7.2.2",
     "view-design": "^4.0.2",
     "vue": "^2.5.2",
